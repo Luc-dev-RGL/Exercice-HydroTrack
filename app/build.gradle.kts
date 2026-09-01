@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.example.hydrotrack"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.hydrotrack"
@@ -61,6 +61,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.extended)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
 
     // ✅ Dépendances de débogage
     debugImplementation(libs.androidx.compose.ui.tooling)
@@ -70,4 +72,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.espresso.core)
+    // Material Components — fournit le thème de base pour l'activité
+    implementation(libs.google.material)
 }
