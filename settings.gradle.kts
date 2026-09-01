@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "HydroTrack"
 include(":app")
+include(":app")
+ 
